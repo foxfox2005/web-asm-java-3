@@ -23,7 +23,7 @@ public class EmailHelper {
 
         Session session = Session.getDefaultInstance(properties, new Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("minhhieuanlao1970@gmail.com", "ofmu lhtb hdpy hnzx");
+                return new PasswordAuthentication("minhhieuanlao1970@gmail.com", "");
             }
         });
 
