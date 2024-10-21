@@ -1,0 +1,18 @@
+{
+  "name": "asm-java3-py00018",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/main/webapp/css/tailwind.css -o ./src/main/webapp/css/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  },
+  "dependencies": {
+    "asm-java3-py00018": "file:"
+  }
+}

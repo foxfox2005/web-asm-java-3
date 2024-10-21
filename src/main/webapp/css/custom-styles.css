@@ -1,0 +1,143 @@
+/* custom-styles.css */
+body {
+    background-color: #e0f7fa; /* Light cyan background */
+    color: #004d40; /* Dark teal text */
+}
+
+h1.text-primary, h3.text-primary, h4.h5 {
+    color: #00695c !important; /* Teal */
+}
+
+.btn-primary {
+    background-color: #00796b; /* Dark teal */
+    border-color: #00796b;
+}
+
+.btn-danger {
+    background-color: #d32f2f; /* Red */
+    border-color: #d32f2f;
+}
+
+.form-control.is-valid {
+    border-color: #388e3c; /* Green */
+}
+
+.form-control.is-invalid {
+    border-color: #d32f2f; /* Red */
+}
+
+.bg-light {
+    background-color: #e0f7fa !important; /* Light cyan */
+}
+
+.text-dark {
+    color: #004d40 !important; /* Dark teal */
+}
+
+.text-primary {
+    color: #00796b !important; /* Dark teal */
+}
+
+.text-muted {
+    color: #757575 !important; /* Grey */
+}
+
+.text-secondary {
+    color: #757575 !important; /* Grey */
+}
+
+.bg-white {
+    background-color: #ffffff !important; /* White */
+}
+
+.shadow {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.rounded {
+    border-radius: 0.25rem !important;
+}
+
+.p-4 {
+    padding: 1.5rem !important;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem !important;
+}
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mt-2 {
+    margin-top: 0.5rem !important;
+}
+
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.justify-content-between {
+    justify-content: space-between !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0 !important;
+}
+
+.relative {
+    position: relative !important;
+}
+
+.absolute {
+    position: absolute !important;
+}
+
+.collapse {
+    display: none !important;
+}
+
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+}

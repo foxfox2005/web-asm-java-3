@@ -1,0 +1,73 @@
+CREATE DATABASE IF NOT EXISTS asmjava;
+USE asmjava;
+
+-- Tạo bảng Categories
+CREATE TABLE Categories (
+                            id VARCHAR(10) PRIMARY KEY,
+                            name VARCHAR(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Chèn dữ liệu vào bảng Categories
+INSERT INTO Categories (id, name) VALUES
+                                      ('CAT001', 'Electronics'),
+                                      ('CAT002', 'Clothing'),
+                                      ('CAT003', 'Home & Garden'),
+                                      ('CAT004', 'Sports & Outdoors'),
+                                      ('CAT005', 'Books');
+
+-- Tạo bảng Users
+CREATE TABLE Users (
+                       id VARCHAR(20) PRIMARY KEY,
+                       password VARCHAR(255) NOT NULL,
+                       fullname VARCHAR(50) NOT NULL,
+                       birthday DATE,
+                       gender BOOLEAN,
+                       mobile VARCHAR(15),
+                       email VARCHAR(50) UNIQUE NOT NULL,
+                       role BOOLEAN NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Chèn dữ liệu vào bảng Users
+INSERT INTO Users (id, password, fullname, birthday, gender, mobile, email, role) VALUES
+                                                                                      ('USER001', 'hashed_password1', 'John Doe', '1990-05-15', true, '123-456-7890', 'john.doe@email.com', false),
+                                                                                      ('USER002', 'hashed_password2', 'Jane Smith', '1988-09-20', false, '987-654-3210', 'jane.smith@email.com', false),
+                                                                                      ('USER003', 'hashed_password3', 'Alice Johnson', '1992-03-10', false, '555-123-4567', 'alice.johnson@email.com', false),
+                                                                                      ('USER004', 'hashed_password4', 'Bob Brown', '1985-11-30', true, '444-555-6666', 'bob.brown@email.com', false),
+                                                                                      ('USER005', 'hashed_password5', 'Eva Wilson', '1995-07-25', false, '777-888-9999', 'eva.wilson@email.com', true);
+
+-- Tạo bảng News
+CREATE TABLE News (
+                      id VARCHAR(10) PRIMARY KEY,
+                      title VARCHAR(100) NOT NULL,
+                      content TEXT NOT NULL,
+                      image VARCHAR(100),
+                      posted_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                      author VARCHAR(20) NOT NULL,
+                      view_count INT DEFAULT 0,
+                      category_id VARCHAR(10) NOT NULL,
+                      home BOOLEAN DEFAULT FALSE,
+                      FOREIGN KEY (author) REFERENCES Users(id) ON DELETE CASCADE,
+                      FOREIGN KEY (category_id) REFERENCES Categories(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Chèn dữ liệu vào bảng News
+INSERT INTO News (id, title, content, image, posted_date, author, view_count, category_id, home) VALUES
+                                                                                                     ('NEWS001', 'New Laptop Model Released', 'A high-performance laptop has been launched...', 'laptop.jpg', '2023-10-01 10:00:00', 'USER001', 100, 'CAT001', true),
+                                                                                                     ('NEWS002', 'Fashion Trends for Fall', 'Discover the latest fashion trends for this fall...', 'fashion.jpg', '2023-10-02 14:30:00', 'USER002', 75, 'CAT002', false),
+                                                                                                     ('NEWS003', 'Gardening Tips for Beginners', 'Essential tips for starting your own garden...', 'garden.jpg', '2023-10-03 09:15:00', 'USER003', 50, 'CAT003', true),
+                                                                                                     ('NEWS004', 'Best Hiking Trails in the Region', 'Explore the most scenic hiking trails in our area...', 'hiking.jpg', '2023-10-04 16:45:00', 'USER004', 120, 'CAT004', false),
+                                                                                                     ('NEWS005', 'Top 10 Must-Read Books of the Year', 'Our picks for the best books released this year...', 'books.jpg', '2023-10-05 20:00:00', 'USER005', 200, 'CAT005', true);
+
+-- Tạo bảng Newsletters
+CREATE TABLE Newsletters (
+                             email VARCHAR(50) PRIMARY KEY,
+                             enabled BOOLEAN DEFAULT TRUE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Chèn dữ liệu vào bảng Newsletters
+INSERT INTO Newsletters (email, enabled) VALUES
+                                             ('john.doe@email.com', true),
+                                             ('jane.smith@email.com', true),
+                                             ('alice.johnson@email.com', true),
+                                             ('bob.brown@email.com', false),
+                                             ('eva.wilson@email.com', true);
