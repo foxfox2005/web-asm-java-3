@@ -37,7 +37,6 @@
 					<th scope="col">Tiêu đề</th>
 					<th scope="col">Hình ảnh</th>
 					<th scope="col">Tác giả</th>
-					<th scope="col">Số lượt xem</th>
 					<th scope="col">Mã loại tin</th>
 					<c:if test="${sessionScope.currentUser.role}">
 						<th scope="col">Trang nhất</th>
@@ -62,7 +61,6 @@
 							</c:choose>
 						</td>
 						<td>${news.usersId}</td>
-						<td>${news.viewCount}</td>
 						<td>${news.categoriesId}</td>
 						<c:if test="${sessionScope.currentUser.role}">
 							<td>${news.home ? 'Có' : 'Không'}</td>

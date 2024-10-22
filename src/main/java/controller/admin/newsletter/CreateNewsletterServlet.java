@@ -24,7 +24,7 @@ public class CreateNewsletterServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getRequestDispatcher("/views/admin/newsletter/createNewsletter.jsp").forward(request, response);
+		request.getRequestDispatcher("/views/admin/newsletter/createletter.jsp").forward(request, response);
 	}
 
 	@Override
@@ -47,6 +47,6 @@ public class CreateNewsletterServlet extends HttpServlet {
 			}
 		}
 		request.setAttribute("newsletter", newsletters);
-		request.getRequestDispatcher("/views/admin/newsletter/createNewsletter.jsp").forward(request, response);
+		request.getRequestDispatcher("/views/admin/newsletter/createletter.jsp").forward(request, response);
 	}
 }

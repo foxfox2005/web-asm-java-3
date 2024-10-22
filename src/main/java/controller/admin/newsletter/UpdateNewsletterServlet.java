@@ -23,7 +23,7 @@ public class UpdateNewsletterServlet extends HttpServlet {
 		Newsletters newsletters = newslettersDAO.selectById(id);
 		if (newsletters != null) {
 			request.setAttribute("newsletter", newsletters);
-			request.getRequestDispatcher("/views/admin/newsletter/updateNewsletter.jsp").forward(request, response);
+			request.getRequestDispatcher("/views/admin/newsletter/updateletter.jsp").forward(request, response);
 		} else {
 			response.sendRedirect(request.getContextPath() + "/admin/newslettersManager");
 		}
@@ -47,6 +47,6 @@ public class UpdateNewsletterServlet extends HttpServlet {
 			return;
 		}
 
-		request.getRequestDispatcher("/views/admin/newsletter/updateNewsletter.jsp").forward(request, response);
+		request.getRequestDispatcher("/views/admin/newsletter/updateletter.jsp").forward(request, response);
 	}
 }

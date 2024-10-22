@@ -81,18 +81,18 @@ public class NewsDAO implements DAO<News, String> {
                     Users users = new Users();
                     users.setId(rs.getString("author"));
 
-                    News news = new News(
-                            rs.getString("id"),
-                            categories.getId(),
-                            users.getId(),
-                            rs.getString("title"),
-                            rs.getString("content"),
-                            rs.getString("image"),
-                            rs.getDate("posted_date"),
-                            rs.getInt("view_count"),
-                            rs.getBoolean("home"),
-                            rs.getString("summary") // Add the summary parameter
-                    );
+					News news = new News(
+							rs.getString("id"),
+							categories.getId(),
+							users.getId(),
+							rs.getString("title"),
+							rs.getString("content"),
+							rs.getString("image"),
+							rs.getDate("posted_date"),
+							rs.getInt("view_count"),
+							rs.getBoolean("home"),
+							rs.getString("summary")
+					);
                     list.add(news);
                 }
             } finally {

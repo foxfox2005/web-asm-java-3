@@ -37,7 +37,7 @@
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
           <h6 class="font-weight-bold">Đăng ký nhận tin</h6>
-          <form action="${pageContext.request.contextPath}/subscribe" method="post">
+          <form action="${pageContext.request.contextPath}/newsletter/subscribe" method="post">
             <div class="input-group">
               <input type="email" name="email" class="form-control" placeholder="Email của bạn ..." required>
               <button class="btn btn-primary" type="submit">Đăng ký</button>

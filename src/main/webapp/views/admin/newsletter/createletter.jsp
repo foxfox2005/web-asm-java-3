@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
 	<jsp:include page="../layout/_meta.jsp" />
-	<title>Thêm Newsletter</title>
+	<title>Create Newsletter</title>
 </head>
 <body class="bg-light text-dark">
 <jsp:include page="../layout/_headerAdmin.jsp" />
@@ -12,19 +12,19 @@
 <section class="section-content">
 	<div class="container">
 		<header class="section-heading py-4">
-			<h3 class="section-title">Thêm Newsletter</h3>
+			<h3 class="section-title">Create Newsletter</h3>
 		</header>
 
 		<main class="row mb-5">
 			<form class="col-lg-6" method="POST" action="${pageContext.request.contextPath}/admin/newslettersManager/create">
-				<c:if test="${not empty requestScope.successMessage}">
+				<c:if test="${not empty successMessage}">
 					<div class="alert alert-success mb-3" role="alert">
-							${requestScope.successMessage}
+							${successMessage}
 					</div>
 				</c:if>
-				<c:if test="${not empty requestScope.errorMessage}">
+				<c:if test="${not empty errorMessage}">
 					<div class="alert alert-danger mb-3" role="alert">
-							${requestScope.errorMessage}
+							${errorMessage}
 					</div>
 				</c:if>
 				<div class="mb-3">
@@ -49,7 +49,7 @@
 						<label class="form-check-label" for="enabled-true">Có</label>
 					</div>
 				</div>
-				<button type="submit" class="btn btn-primary me-2 mb-3">Thêm</button>
+				<button type="submit" class="btn btn-primary me-2 mb-3">Create</button>
 				<a class="btn btn-danger mb-3" href="${pageContext.request.contextPath}/admin/newslettersManager" role="button" onclick="return confirm('Bạn có muốn hủy?')">Hủy</a>
 			</form>
 		</main>

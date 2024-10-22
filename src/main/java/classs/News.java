@@ -44,7 +44,7 @@ public class News {
 	}
 
 	public News(String id, String categoriesId, String usersId, String title, String content, String image,
-			Date postedDate, Integer viewCount, Boolean home, String summary) {
+				Date postedDate, Integer viewCount, Boolean home, String summary) {
 		this.id = id;
 		this.categoriesId = categoriesId;
 		this.usersId = usersId;

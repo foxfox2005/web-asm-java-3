@@ -68,11 +68,11 @@
 						<label class="form-label d-block">Lên trang nhất <span class="text-danger">*</span></label>
 						<div class="form-check d-inline-block">
 							<input class="form-check-input" type="radio" name="home" id="home-false" value="false" ${!requestScope.news.home ? 'checked' : ''}>
-							<label class="form-check-label" for="home-false">Không</label>
+							<label class="form-check-label" for="home-false">Có</label>
 						</div>
 						<div class="form-check d-inline-block me-4">
 							<input class="form-check-input" type="radio" name="home" id="home-true" value="true" ${requestScope.news.home ? 'checked' : ''}>
-							<label class="form-check-label" for="home-true">Có</label>
+							<label class="form-check-label" for="home-true">Không</label>
 						</div>
 					</div>
 				</c:if>
